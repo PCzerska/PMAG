@@ -2,8 +2,6 @@ import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-
-// Eventy
 abstract class AuthenticationEvent {}
 
 class AppStarted extends AuthenticationEvent {}
@@ -12,7 +10,6 @@ class UserLoggedIn extends AuthenticationEvent {}
 
 class UserLoggedOut extends AuthenticationEvent {}
 
-// Stany
 abstract class AuthenticationState {}
 
 class AuthenticationInitial extends AuthenticationState {}
@@ -21,7 +18,6 @@ class AuthenticatedState extends AuthenticationState {}
 
 class UnauthenticatedState extends AuthenticationState {}
 
-// Bloc
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
